@@ -52,7 +52,7 @@ class _RatingBoxState extends State<RatingBox> {
         Container(
             padding: const EdgeInsets.all(0),
             child: IconButton(
-              icon: (_rating >= 1
+              icon: (_rating >= 2
                   ? Icon(
                       Icons.star,
                       size: _size,
@@ -62,13 +62,13 @@ class _RatingBoxState extends State<RatingBox> {
                       size: _size,
                     )),
               color: Colors.red[500],
-              onPressed: _setRatingAsOne,
+              onPressed: _setRatingAsTwo,
               iconSize: _size,
             )),
         Container(
             padding: const EdgeInsets.all(0),
             child: IconButton(
-              icon: (_rating >= 1
+              icon: (_rating >= 3
                   ? Icon(
                       Icons.star,
                       size: _size,
@@ -78,7 +78,7 @@ class _RatingBoxState extends State<RatingBox> {
                       size: _size,
                     )),
               color: Colors.red[500],
-              onPressed: _setRatingAsOne,
+              onPressed: _setRatingAsThree,
               iconSize: _size,
             )),
       ],
