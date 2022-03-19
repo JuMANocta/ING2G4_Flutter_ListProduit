@@ -4,7 +4,7 @@ import 'ratingbox.dart';
 
 class ProduitBox extends StatelessWidget {
   final Produit item;
-  ProduitBox({Key? key, required this.item}) : super(key: key);
+  const ProduitBox({Key? key, required this.item}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
