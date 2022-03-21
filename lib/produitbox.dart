@@ -10,12 +10,12 @@ class ProduitBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         padding: const EdgeInsets.all(2),
-        height: 140,
+        height: 200,
         child: Card(
             child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Image.asset(item.image),
+            Image.asset('assets/' + item.image),
             Expanded(
                 child: Container(
                     padding: const EdgeInsets.all(5),

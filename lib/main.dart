@@ -41,7 +41,9 @@ class MyHomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => ProduitPage(item: items[index],)),
+                      builder: (context) => ProduitPage(
+                            item: items[index],
+                          )),
                 );
               },
             );

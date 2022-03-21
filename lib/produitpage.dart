@@ -13,31 +13,29 @@ class ProduitPage extends StatelessWidget {
       ),
       body: Center(
           child: Container(
-        padding: EdgeInsets.all(0),
+        padding: const EdgeInsets.all(0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset(item.image),
+            Image.asset('assets/' + item.image),
             Expanded(
               child: Container(
-                padding: EdgeInsets.all(5),
+                padding: const EdgeInsets.all(5),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text(
-                      item.name, 
-                      style: TextStyle(fontWeight: FontWeight.bold)
-                    ),
+                    Text(item.name,
+                        style: const TextStyle(fontWeight: FontWeight.bold)),
                     Text(
                       item.description,
                     ),
-                    Text(
-                      'Prix : ' + item.prix.toString()),
+                    Text('Prix : ' + item.prix.toString()),
                     const RatingBox(),
                   ],
                 ),
-              ),)
+              ),
+            )
           ],
         ),
       )),
