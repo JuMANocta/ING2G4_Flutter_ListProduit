@@ -9,28 +9,31 @@ class ProduitBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: const EdgeInsets.all(2),
-        height: 200,
-        child: Card(
-            child: Row(
+      padding: const EdgeInsets.all(2),
+      height: 200,
+      child: Card(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image.asset('assets/' + item.image),
             Expanded(
-                child: Container(
-                    padding: const EdgeInsets.all(5),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Text(item.name,
-                            style:
-                                const TextStyle(fontWeight: FontWeight.bold)),
-                        Text(item.description),
-                        Text("Prix : " + item.prix.toString()),
-                        const RatingBox(),
-                      ],
-                    ))),
+              child: Container(
+                padding: const EdgeInsets.all(5),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text(item.name,
+                        style: const TextStyle(fontWeight: FontWeight.bold)),
+                    Text(item.description),
+                    Text("Prix : " + item.prix.toString()),
+                    const RatingBox(),
+                  ],
+                ),
+              ),
+            ),
           ],
-        )));
+        ),
+      ),
+    );
   }
 }

@@ -35,7 +35,7 @@ class ProduitPage extends StatelessWidget {
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       )),

@@ -26,6 +26,7 @@ class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
   final items = Produit.getProduits();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,21 +34,23 @@ class MyHomePage extends StatelessWidget {
         title: Text(title),
       ),
       body: ListView.builder(
-          itemCount: items.length,
-          itemBuilder: ((context, index) {
-            return GestureDetector(
-              child: ProduitBox(item: items[index]),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ProduitPage(
-                            item: items[index],
-                          )),
-                );
-              },
-            );
-          })),
+        itemCount: items.length,
+        itemBuilder: ((context, index) {
+          return GestureDetector(
+            child: ProduitBox(item: items[index]),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ProduitPage(
+                    item: items[index],
+                  ),
+                ),
+              );
+            },
+          );
+        }),
+      ),
     );
   }
 }
